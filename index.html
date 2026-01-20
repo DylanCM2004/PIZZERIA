@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riminesi - Pizzería Artesanal</title>
+    <link rel="stylesheet" href="./index.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046751.png">
+</head>
+<body>
+    <!-- ===== NAVBAR FLOTANTE ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Riminesi</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#menu-rapido">Menú</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO CON VIDEO ===== -->
+    <header class="hero">
+        <div class="video-container">
+            <!-- Video placeholder: puedes reemplazar con un GIF/MP4 local -->
+            <video autoplay muted loop playsinline>
+                <source src="./1192-143842659_small.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Riminesi</h1>
+            <p class="hero-subtitle">El sabor de la costa adriática</p>
+            <div class="hero-buttons">
+                <a href="#menu-completo" class="btn btn-primary">Explora nuestro menú</a>
+                <a href="#reservas" class="btn btn-secondary">Reserva tu mesa</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SECCIÓN HISTORIA ===== -->
+    <section class="section historia" id="historia">
+        <div class="container">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <div class="historia-content">
+                <div class="historia-text">
+                    <p>En 1985, los hermanos <strong>Riminesi</strong> llegaron desde Rímini, Italia, con una receta familiar centenaria y un sueño: compartir la auténtica pizza artesanal adriática.</p>
+                    <p>Hoy, tercera generación, seguimos cociendo cada pizza en horno de leña con ingredientes importados directamente de Italia y pasión que traspasa fronteras.</p>
+                    <p>Nuestra masa fermenta 72 horas, nuestro queso mozzarella es de búfala campana y nuestro tomate San Marzano DOP. Cada plato es un viaje a la costa italiana.</p>
+                </div>
+                <div class="historia-image">
+                    <img src="https://www.tiovivocreativo.com/wp-content/uploads/2017/05/Duomo.Restaurante.Hotel_.Rimini-Italia.Ron-Arad.Clas_.H%C2%AAMueble-Deco.Inter_.jpg" alt="Interior de Riminesi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NAVEGACIÓN RÁPIDA DEL MENÚ ===== -->
+    <section class="section menu-rapido" id="menu-rapido">
+        <div class="container">
+            <h2 class="section-title">Descubre Nuestro Menú</h2>
+            <p class="section-subtitle">Haz clic en una categoría para ir directamente</p>
+            <div class="tarjetas-grid">
+                <a href="#entradas" class="tarjeta">
+                    <div class="tarjeta-icono"><i class="fas fa-shrimp"></i></div>
+                    <h3>Entradas</h3>
+                    <p>Bruschettas, antipastos y más</p>
+                </a>
+                <a href="#platos-fuertes" class="tarjeta">
+                    <div class="tarjeta-icono"><i class="fas fa-utensils"></i></div>
+                    <h3>Platos Fuertes</h3>
+                    <p>Pastas y especialidades</p>
+                </a>
+                <a href="#pizza-lasagna" class="tarjeta">
+                    <div class="tarjeta-icono"><i class="fas fa-pizza-slice"></i></div>
+                    <h3>Pizza & Lasagna</h3>
+                    <p>Artesanales y gourmet</p>
+                </a>
+                <a href="#bebidas-cocteles" class="tarjeta">
+                    <div class="tarjeta-icono"><i class="fas fa-cocktail"></i></div>
+                    <h3>Bebidas & Cócteles</h3>
+                    <p>Refrescantes y clásicos</p>
+                </a>
+                <a href="#vinos" class="tarjeta">
+                    <div class="tarjeta-icono"><i class="fas fa-wine-glass-alt"></i></div>
+                    <h3>Vinos</h3>
+                    <p>Selección italiana premium</p>
+                </a>
+                <a href="#postres" class="tarjeta">
+                    <div class="tarjeta-icono"><i class="fas fa-ice-cream"></i></div>
+                    <h3>Postres</h3>
+                    <p>Dulces tradicionales</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENÚ COMPLETO CON FILTROS ===== -->
+    <section class="section menu-completo" id="menu-completo">
+        <div class="container">
+            <h2 class="section-title">Menú Completo</h2>
+            <div class="filtros" id="filtros">
+                <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="mariscos">Mariscos</button>
+                <button class="filtro-btn" data-filtro="picante">Picante</button>
+                <button class="filtro-btn" data-filtro="vegetariano">Vegetariano</button>
+            </div>
+
+            <!-- CATEGORÍA: ENTRADAS -->
+            <div class="categoria-menu" id="entradas">
+                <h3 class="categoria-titulo"><i class="fas fa-shrimp"></i> Entradas</h3>
+                <div class="platos-list">
+                    <div class="plato-item" data-etiquetas="vegetariano, picante" >
+                        <div class="plato-header">
+                            <h4>Bruschetta Classica</h4>
+                            <span class="precio">$18.000</span>
+                        </div>
+                        <p class="plato-desc">Pan rústico tostado con tomate fresco, albahaca y aceite de oliva extra virgen.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="mariscos">
+                        <div class="plato-header">
+                            <h4>Calamari Fritti</h4>
+                            <span class="precio">$32.000</span>
+                        </div>
+                        <p class="plato-desc">Calamares frescos rebozados en harina de garbanzo, fritos y servidos con alioli de limón.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="picante">
+                        <div class="plato-header">
+                            <h4>Antipasto Picante</h4>
+                            <span class="precio">$28.000</span>
+                        </div>
+                        <p class="plato-desc">Selección de embutidos italianos, quesos y vegetales encurtidos con toque de chili.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="picante, vegetariano">
+                        <div class="plato-header">
+                            <h4>Provoleta Picante</h4>
+                            <span class="precio">$28.000</span>
+                        </div>
+                        <p class="plato-desc">Queso provolone fundido con ají y orégano.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA: PLATOS FUERTES -->
+            <div class="categoria-menu" id="platos-fuertes">
+                <h3 class="categoria-titulo"><i class="fas fa-utensils"></i> Platos Fuertes</h3>
+                <div class="platos-list">
+                    <div class="plato-item" data-etiquetas="mariscos">
+                        <div class="plato-header">
+                            <h4>Spaghetti ai Frutti di Mare</h4>
+                            <span class="precio">$45.000</span>
+                        </div>
+                        <p class="plato-desc">Spaghetti con mejillones, calamares, gambas y almejas en salsa de vino blanco y ajo.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="vegetariano">
+                        <div class="plato-header">
+                            <h4>Risotto al Funghi Porcini</h4>
+                            <span class="precio">$38.000</span>
+                        </div>
+                        <p class="plato-desc">Arroz arbóreo cremoso con hongos porcini silvestres y queso parmesano reggiano.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Churrasco a la Parrilla</h4>
+                            <span class="precio">$45.000</span>
+                        </div>
+                        <p class="plato-desc">Corte de res a la parrilla acompañado de papas y ensalada.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Pechuga de Pollo en Salsa Champiñones</h4>
+                            <span class="precio">$38.000</span>
+                        </div>
+                        <p class="plato-desc">Pechuga jugosa con salsa cremosa de champiñones.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Chuleta de Cerdo Milanesa</h4>
+                            <span class="precio">$40.000</span>
+                        </div>
+                        <p class="plato-desc">PChuleta empanizada, crocante, servida con pasta corta.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="mariscos, picante">
+                        <div class="plato-header">
+                            <h4>Salmón en Salsa Picante</h4>
+                            <span class="precio">$52.000</span>
+                        </div>
+                        <p class="plato-desc">Filete de salmón con salsa de tomate y ají.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA: PIZZA & LASAGNA -->
+            <div class="categoria-menu" id="pizza-lasagna">
+                <h3 class="categoria-titulo"><i class="fas fa-pizza-slice"></i> Pizza & Lasagna</h3>
+                <div class="platos-list">
+                    <div class="plato-item" data-etiquetas="vegetariano">
+                        <div class="plato-header">
+                            <h4>Pizza Margherita DOP</h4>
+                            <span class="precio">$35.000</span>
+                        </div>
+                        <p class="plato-desc">Masa napolitana, salsa San Marzano, mozzarella di bufala, albahaca fresca.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="mariscos, vegetariana">
+                        <div class="plato-header">
+                            <h4>Pizza Calamarata</h4>
+                            <span class="precio">$42.000</span>
+                        </div>
+                        <p class="plato-desc">Masa artesanal con salsa pomodoro, calamares frescos, aceitunas negras y albahaca.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="mariscos">
+                        <div class="plato-header">
+                            <h4>Pizza Frutti di Mare</h4>
+                            <span class="precio">$42.000</span>
+                        </div>
+                        <p class="plato-desc">Mariscos mixtos, salsa de tomate y mozzarella.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="picante">
+                        <div class="plato-header">
+                            <h4>Lasagna Diavola</h4>
+                            <span class="precio">$40.000</span>
+                        </div>
+                        <p class="plato-desc">Láminas caseras con carne picante, ricotta, mozzarella y salsa bechamel.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="picante">
+                        <div class="plato-header">
+                            <h4>Lasagna Boloñesa</h4>
+                            <span class="precio">$38.000</span>
+                        </div>
+                        <p class="plato-desc">Capas de pasta con carne, salsa boloñesa y queso.</p>
+                    </div>
+                    <div class="plato-item" data-etiquetas="picante, mariscos">
+                        <div class="plato-header">
+                            <h4>Lasagna de Mariscos Picante</h4>
+                            <span class="precio">$35.000</span>
+                        </div>
+                        <p class="plato-desc">Camarones y calamares en salsa roja con ají.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA: BEBIDAS & CÓCTELES -->
+            <div class="categoria-menu" id="bebidas-cocteles">
+                <h3 class="categoria-titulo"><i class="fas fa-cocktail"></i> Bebidas & Cócteles</h3>
+                <div class="platos-list">
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Negroni Classico</h4>
+                            <span class="precio">$28.000</span>
+                        </div>
+                        <p class="plato-desc">Gin, vermú rojo, Campari. Clásico italiano con twist de naranja.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Limoncello Spritz</h4>
+                            <span class="precio">$22.000</span>
+                        </div>
+                        <p class="plato-desc">Prosecco, limoncello casero, soda y menta fresca.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Spritz Picante</h4>
+                            <span class="precio">$24.000</span>
+                        </div>
+                        <p class="plato-desc">Cóctel refrescante con toque de ají.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Limonada Natural</h4>
+                            <span class="precio">$8.000</span>
+                        </div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Gaseosa</h4>
+                            <span class="precio">$5.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA: VINOS -->
+            <div class="categoria-menu" id="vinos">
+                <h3 class="categoria-titulo"><i class="fas fa-wine-glass-alt"></i> Vinos</h3>
+                <div class="platos-list">
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Chianti Classico Riserva</h4>
+                            <span class="precio">$120.000</span>
+                        </div>
+                        <p class="plato-desc">Toscana 2018. Taninos elegantes, notas de cereza y cuero.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Pinot Grigio delle Venezie</h4>
+                            <span class="precio">$95.000</span>
+                        </div>
+                        <p class="plato-desc">Blanco fresco con aromas cítricos y final mineral.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Montepulciano d'Abruzzo</h4>
+                            <span class="precio">$130.000</span>
+                        </div>
+                        <p class="plato-desc">Compuesto por sabores jugosos de frutas rojas y hierbas aromáticas.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Prosecco</h4>
+                            <span class="precio">$190.000</span>
+                        </div>
+                        <p class="plato-desc">espumoso brillante y refrescante de Veneto, con notas de manzana verde y pera.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Barolo</h4>
+                            <span class="precio">$750.000</span>
+                        </div>
+                        <p class="plato-desc">Es un tinto con cuerpo de Piamonte, ideal para ocasiones especiales y carnes rojas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA: POSTRES -->
+            <div class="categoria-menu" id="postres">
+                <h3 class="categoria-titulo"><i class="fas fa-ice-cream"></i> Postres</h3>
+                <div class="platos-list">
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Tiramisù della Nonna</h4>
+                            <span class="precio">$18.000</span>
+                        </div>
+                        <p class="plato-desc">Clásico con café arábica, mascarpone y cacao en polvo.</p>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-header">
+                            <h4>Panna Cotta al Frutto della Passione</h4>
+                            <span class="precio">$16.000</span>
+                        </div>
+                        <p class="plato-desc">Crema de vainilla con coulis de maracuyá y frambuesas frescas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALERÍA INTERACTIVA ===== -->
+    <section class="section galeria" id="galeria">
+        <div class="container">
+            <h2 class="section-title">Nuestro Ambiente</h2>
+            <p class="section-subtitle">Un vistazo a la experiencia Riminesi</p>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg" alt="Pizza recién horneada">
+                    <div class="galeria-overlay">
+                        <p>Pizza Margherita recién salida del horno de leña</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.pexels.com/photos/7245538/pexels-photo-7245538.jpeg" alt="Interior restaurante">
+                    <div class="galeria-overlay">
+                        <p>Nuestro comedor principal con decoración italiana</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.pexels.com/photos/5904711/pexels-photo-5904711.jpeg" alt="Pasta casera">
+                    <div class="galeria-overlay">
+                        <p>Pasta fresca hecha a mano cada mañana</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg" alt="Vinos italianos">
+                    <div class="galeria-overlay">
+                        <p>Selección de vinos italianos de pequeñas bodegas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORMULARIO DE RESERVA ===== -->
+    <section class="section reservas" id="reservas">
+        <div class="container">
+            <h2 class="section-title">Reserva tu Mesa</h2>
+            <p class="section-subtitle">Déjanos tus datos y te confirmaremos disponibilidad</p>
+            <form class="reserva-form" id="reservaForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="personas">Número de personas *</label>
+                        <select id="personas" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                            <option value="5">5 personas</option>
+                            <option value="6">6 o más personas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha *</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora *</label>
+                        <select id="hora" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="comentario">Comentarios adicionales</label>
+                    <textarea id="comentario" rows="4" placeholder="Alergias, celebración especial, etc."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar Reserva</button>
+                <div id="formFeedback" class="form-feedback"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Riminesi</h3>
+                    <p>Pizzería artesanal italiana. Tradición familiar desde 1985.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle 123 #45-67, Bogotá</p>
+                    <p><i class="fas fa-phone"></i> +57 1 234 5678</p>
+                    <p><i class="fas fa-mobile-alt"></i> +57 301 383 2317</p>
+                    <p><i class="fas fa-envelope"></i> reservas@riminesi.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Horarios</h4>
+                    <p><strong>Lunes a Viernes:</strong> 12:00 PM - 10:00 PM</p>
+                    <p><strong>Sábados,</strong></p>
+                    <p><strong>Domingo y Festivos::</strong> 12:00 PM - 9:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Riminesi. Todos los derechos reservados. | <em>Sitio web demostrativo. Proyecto de portafolio.</em></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BOTÓN WHATSAPP FLOTANTE ===== -->
+    <a href="#" class="whatsapp-float" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== MODAL PARA GALERÍA ===== -->
+    <div class="modal" id="galeriaModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <p id="modalCaption"></p>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
