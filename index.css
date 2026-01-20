@@ -739,6 +739,7 @@ body {
     
     .precio {
         align-self: flex-end;
-        margin-top: -1.5rem;
+        margin-top: 1%;
     }
+
 }
